@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ice="http://www.icesoft.com/icefaces/component"
+      xmlns:cc="http://java.sun.com/jsf/composite">
+
+    <cc:interface>
+        <cc:attribute name="inscricao" required="true"/>
+    </cc:interface>
+
+    <cc:implementation xmlns="http://www.w3.org/1999/xhtml"
+                       xmlns:f="http://java.sun.com/jsf/core"
+                       xmlns:ice="http://www.icesoft.com/icefaces/component"
+                       xmlns:ace="http://www.icefaces.org/icefaces/components"
+                       xmlns:cc="http://java.sun.com/jsf/composite">
+
+        <ice:selectOneMenu id="inscricaoInput" value="#{cc.attrs.inscricao}" style="width:12em" styleClass="ui-selectonemenu">
+            <f:selectItems value="#{inscricao_Bean.minicursos}" var="i" itemValue="#{i.situacao}"/>
+        </ice:selectOneMenu> 
+        
+    </cc:implementation>
+</html>
